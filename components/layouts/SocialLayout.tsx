@@ -17,8 +17,12 @@ export function SocialLayout({ children }: SocialLayoutProps) {
       <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-100">
         <div className="max-w-2xl mx-auto px-6 py-5">
           <div className="flex justify-between items-center">
-            <Link href="/" className="font-medium tracking-tight">
-              {tenant.name}
+            <Link href="/" className="flex items-center gap-3">
+              <span className="text-2xl">🔗</span>
+              <div>
+                <span className="font-bold text-slate-700">katiewokasch</span>
+                <span className="text-sky-400">.social</span>
+              </div>
             </Link>
             <div className="flex items-center gap-6 text-sm text-neutral-500">
               <Link

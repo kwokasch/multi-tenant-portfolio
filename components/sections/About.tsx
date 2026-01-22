@@ -91,36 +91,23 @@ function EngineerAbout() {
   const tenant = useTenant();
 
   return (
-    <section className="px-6 py-20">
+    <section className="px-6 pt-20">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <h2 className="text-4xl font-bold mb-4">
             About <span className="text-orange-500">Me</span>
           </h2>
-          <p className="text-slate-400 max-w-2xl">
-            The path from geology to software engineering.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Bio */}
           <div className="space-y-6">
             <p className="text-slate-300 text-lg leading-relaxed">
-              I&apos;m a software engineer with an unconventional background. After
-              earning my degree in Geology and working as a geo-tech consultant, I
-              discovered a passion for building software that led me to make a
-              career pivot in 2019.
+              I&apos;m a full-stack software engineer with a life-long passion for learning how things work. Whether it&apos;s building software, learning new technologies, or exploring the natural world, I&apos;ve never been satisfied with taking things at face value.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              Today, I work at Name.com as a Senior Software Engineer, where I
-              build APIs and developer tools that help partners integrate domain
-              services. I care deeply about developer experience and creating
-              software that&apos;s intuitive to use.
-            </p>
-            <p className="text-slate-400 leading-relaxed">
-              My geology background taught me to think systematically about complex
-              problems and find patterns in data. Those skills translate surprisingly
-              well to debugging production issues and designing scalable systems.
+              Today, I work at Name.com as a Product Engineer and Manager, where I
+              lead a team of product managers and engineers to build the best products and experiences for our users.
             </p>
 
             {/* Key highlights */}
@@ -131,15 +118,15 @@ function EngineerAbout() {
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
                   <span className="text-orange-500 mt-1">→</span>
-                  <span>Senior Software Engineer at Name.com, building developer-focused products</span>
+                  <span>Product Engineer and Manager at Name.com, focused on building the best products and experiences for our users</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange-500 mt-1">→</span>
-                  <span>Full-stack development with TypeScript, React, Node.js, and PostgreSQL</span>
+                  <span>Full-stack development with TypeScript, Vue.js, PHP, and more</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange-500 mt-1">→</span>
-                  <span>Career changer who brings a unique perspective to problem-solving</span>
+                  <span>Passionate about continuous learning and creative problem-solving</span>
                 </li>
               </ul>
             </div>
@@ -153,13 +140,13 @@ function EngineerAbout() {
                 <div>
                   <h4 className="text-orange-500 font-medium mb-1">User-Focused</h4>
                   <p className="text-slate-400 text-sm">
-                    Building features that solve real problems, not just technically interesting ones.
+                    Building features that solve real problems, not just interesting ones.
                   </p>
                 </div>
                 <div>
                   <h4 className="text-orange-500 font-medium mb-1">Iterative</h4>
                   <p className="text-slate-400 text-sm">
-                    Ship early, gather feedback, improve. Perfect is the enemy of done.
+                    Ship early, gather feedback, iterate, and improve.
                   </p>
                 </div>
                 <div>
@@ -168,16 +155,28 @@ function EngineerAbout() {
                     The best solutions come from diverse perspectives and open communication.
                   </p>
                 </div>
+                <div>
+                  <h4 className="text-orange-500 font-medium mb-1">Innovative</h4>
+                  <p className="text-slate-400 text-sm">
+                    Leverage emerging technologies and best practices to build the best products and experiences for our users.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-orange-500 font-medium mb-1">Force Multiplier</h4>
+                  <p className="text-slate-400 text-sm">
+                    Empowering others to build and grow—teams achieve more together.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
-              <p className="text-slate-300 italic">
-                &ldquo;The transition from geology to software felt less like a
+            {/* <div className="ring-1 ring-orange-500 shadow-lg shadow-orange-500/25 rounded-xl p-6">
+              <p className="text-orange-500 italic">
+                The transition from geology to software felt less like a
                 career change and more like discovering a different way to satisfy
-                the same curiosity about how things work.&rdquo;
+                the same curiosity and desire to understand how things work.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -332,14 +331,15 @@ function SocialAbout() {
 export function AboutSection() {
   const tenant = useTenant();
 
-  switch (tenant.layout) {
-    case "rocks":
-      return <RocksAbout />;
-    case "engineer":
-      return <EngineerAbout />;
-    case "social":
-      return <SocialAbout />;
-    default:
-      return <RocksAbout />;
+  // Explicitly check tenant layout to ensure correct rendering
+  if (tenant.layout === "engineer") {
+    return <EngineerAbout />;
   }
+  
+  if (tenant.layout === "social") {
+    return <SocialAbout />;
+  }
+  
+  // Default to rocks for rocks tenant or any other case
+  return <RocksAbout />;
 }

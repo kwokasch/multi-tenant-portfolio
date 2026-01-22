@@ -20,7 +20,7 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="text-2xl group-hover:animate-bounce">🦔</div>
               <div>
-                <span className="font-bold text-orange-500">kwokasch</span>
+                <span className="font-bold text-orange-500">katiewokasch</span>
                 <span className="text-slate-500">.engineer</span>
               </div>
             </Link>
@@ -71,9 +71,9 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-white mb-4">kwokasch.engineer</h3>
-              <p className="text-slate-500 text-sm">
-                Building things that occasionally work on the first try.
-              </p>
+              <div className="flex justify-between items-center text-sm text-slate-400">
+                <p>&copy; {new Date().getFullYear()} • Made with <span>🧡</span> and a lot of <span>☕</span></p>
+              </div>
             </div>
             <div>
               <h3 className="font-bold text-white mb-4">Links</h3>
@@ -103,10 +103,6 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
               </div>
               <p className="text-slate-600 text-xs mt-2">*probably</p>
             </div>
-          </div>
-          <div className="pt-8 border-t border-slate-800 flex justify-between items-center text-sm text-slate-600">
-            <p>&copy; {new Date().getFullYear()} • Made with mass chaos and mass caffeine</p>
-            <p className="font-mono text-xs">v0.0.1-alpha-probably-broken</p>
           </div>
         </div>
       </footer>

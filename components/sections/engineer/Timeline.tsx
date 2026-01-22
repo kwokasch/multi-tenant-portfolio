@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useTenant } from "@/lib/tenants/context";
 
 interface TimelineEntry {
@@ -9,40 +10,72 @@ interface TimelineEntry {
   company: string;
   description: string;
   type: "work" | "education" | "transition";
+  logo?: string;
 }
 
 const timelineData: TimelineEntry[] = [
   {
-    year: "2024",
+    year: "2026 - Present",
+    title: "Manager, Product Engineering",
+    company: "Name.com",
+    description:
+      "Bridging the gap between product and engineering. Leading a team of product managers and engineers to build the best products and experiences for our users.",
+    type: "work",
+    logo: "/images/engineer/name-logo.jpg",
+  },
+  {
+    year: "2023 - 2026",
     title: "Senior Software Engineer",
     company: "Name.com",
     description:
-      "Leading API development and building best-in-class developer experiences. Making it easier than ever for partners to integrate domain services.",
+      "Building best-in-class products and experiences through deep cross-functional collaboration.",
     type: "work",
+    logo: "/images/engineer/name-logo.jpg",
   },
   {
-    year: "2021",
+    year: "2021 - 2023",
     title: "Software Engineer",
     company: "Name.com",
     description:
-      "Full-stack development on domain registration and management platforms. Building scalable services and improving user experiences.",
+      "Building best-in-class products and experiences through deep cross-functional collaboration.",
     type: "work",
+    logo: "/images/engineer/name-logo.jpg",
+  },
+  {
+    year: "2020 - 2021",
+    title: "Associate Software Engineer",
+    company: "Name.com",
+    description:
+      "Learning the ropes and building my passion for software engineering.",
+    type: "work", 
+    logo: "/images/engineer/name-logo.jpg",
   },
   {
     year: "2019",
-    title: "Career Transition",
+    title: "Software Engineering Bootcamp",
     company: "Flatiron School",
     description:
       "Intensive 15-week full-stack web development bootcamp. JavaScript, React, Node.js, Ruby on Rails. Built Homeward Bound, a pet recovery platform.",
-    type: "transition",
+    type: "education",
+    logo: "/images/engineer/flatiron-logo.jpg",
   },
   {
-    year: "2014",
+    year: "2014 - 2019",
     title: "Geologist",
     company: "Chevron",
     description:
       "Worked as a professional geologist in the oil and gas industry. Applied geological principles to exploration and production challenges at one of the world's largest energy companies.",
     type: "work",
+    logo: "/images/engineer/chevron-logo.jpg",
+  },
+  {
+    year: "2013 - 2015",
+    title: "M.S. Geology",
+    company: "Colorado School of Mines",
+    description:
+      "Earned a Master's degree in Geology. Studied structural geology, salt tectonics and sedimentology/stratigraphy. Explored the intersection of geology and technology.",
+    type: "education",  
+    logo: "/images/engineer/mines-logo.png",
   },
   {
     year: "2013",
@@ -51,6 +84,7 @@ const timelineData: TimelineEntry[] = [
     description:
       "Applied geological expertise to technical consulting projects. Bridged the gap between field research and practical applications.",
     type: "work",
+    logo: "/images/engineer/igr-logo.jpg",
   },
   {
     year: "2012",
@@ -59,6 +93,7 @@ const timelineData: TimelineEntry[] = [
     description:
       "Developed a strong foundation in Earth sciences, field methods, and analytical techniques. Sparked a lifelong curiosity about how things work.",
     type: "education",
+    logo: "/images/engineer/miami-logo.jpg",
   },
 ];
 
@@ -105,10 +140,25 @@ function TimelineItem({
             </span>
             <span className="text-slate-500 text-sm font-mono">{entry.year}</span>
           </div>
-          <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-orange-400 transition-colors">
-            {entry.title}
-          </h3>
-          <p className="text-orange-500 font-medium mb-3">{entry.company}</p>
+          <div className="flex items-start gap-4 mb-3">
+            {entry.logo && (
+              <div className="flex-shrink-0">
+                <Image
+                  src={entry.logo}
+                  alt={`${entry.company} logo`}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 object-fill rounded-full bg-white/5 border-2 border-white"
+                />
+              </div>
+            )}
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-slate-100 mb-1 group-hover:text-orange-400 transition-colors">
+                {entry.title}
+              </h3>
+              <p className="text-orange-500 font-medium">{entry.company}</p>
+            </div>
+          </div>
           <p className="text-slate-400 text-sm leading-relaxed">
             {entry.description}
           </p>

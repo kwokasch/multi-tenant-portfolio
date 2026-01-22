@@ -1,9 +1,9 @@
 "use client";
 
 import { useTenant } from "@/lib/tenants/context";
-import { RocksHero } from "./RocksHero";
-import { EngineerHero } from "./EngineerHero";
-import { SocialHero } from "./SocialHero";
+import { RocksHero } from "./rocks/RocksHero";
+import { EngineerHero } from "./engineer/EngineerHero";
+import { SocialHero } from "./social/SocialHero";
 
 export function Hero() {
   const tenant = useTenant();

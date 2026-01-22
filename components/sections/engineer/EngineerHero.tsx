@@ -1,15 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useTenant } from "@/lib/tenants/context";
 
 const techStack = [
-  { name: "TypeScript", category: "Language" },
-  { name: "React", category: "Frontend" },
-  { name: "Next.js", category: "Framework" },
-  { name: "Node.js", category: "Runtime" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "AWS", category: "Cloud" },
+  { name: "TypeScript", logo: "/images/engineer/typescript-logo.png", category: "Language" },
+  { name: "Vue.js", logo: "/images/engineer/vue-logo.png", category: "Frontend" },
+  { name: "PHP", logo: "/images/engineer/php-logo.png", category: "Backend" },
+  { name: "Gitlab CI/CD", logo: "/images/engineer/gitlab-logo.png", category: "Automation" },
+  { name: "Ruby on Rails", logo: "/images/engineer/ruby-logo.png", category: "Backend" },
+  { name: "React", logo: "/images/engineer/react-logo.png", category: "Mobile" },
 ];
 
 export function EngineerHero() {
@@ -52,10 +53,6 @@ export function EngineerHero() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-500/10 border border-green-500/30 rounded-full text-green-400 text-sm mb-8 font-mono">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                Available for opportunities
-              </div>
             </div>
 
             <h1
@@ -71,7 +68,7 @@ export function EngineerHero() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Senior Software Engineer
+              Manager, Product Engineering            
             </p>
 
             <p
@@ -79,9 +76,7 @@ export function EngineerHero() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Building developer tools and APIs at{" "}
-              <span className="text-orange-500 font-medium">Name.com</span>.
-              Former geologist who traded rock hammers for keyboards. Still debugging my career path.
+              Building industry-leading developer tools and customer products at <a href="https://www.name.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 font-medium">Name.com</a>, bringing empathy and a user-centric approach to every project.
             </p>
 
             <div
@@ -129,7 +124,7 @@ export function EngineerHero() {
             <div className="bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-3 h-3 rounded-full bg-orange-500" />
-                <span className="text-slate-400 font-mono text-sm">tech_stack.json</span>
+                <span className="text-slate-400 font-mono text-sm">TECH STACK</span>
               </div>
 
               <div className="space-y-4">
@@ -144,6 +139,15 @@ export function EngineerHero() {
                     <div className="flex items-center gap-3">
                       <div className="w-2 h-2 rounded-full bg-orange-500" />
                       <span className="text-slate-200 font-medium">{tech.name}</span>
+                      {tech.logo && (
+                        <Image
+                          src={tech.logo}
+                          alt={`${tech.name} logo`}
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain"
+                        />
+                      )}
                     </div>
                     <span className="text-slate-500 text-sm font-mono">{tech.category}</span>
                   </div>
@@ -160,20 +164,6 @@ export function EngineerHero() {
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl" />
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl" />
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 delay-[1000ms] ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-        >
-          <div className="flex flex-col items-center gap-2 text-slate-500">
-            <span className="text-xs uppercase tracking-wider">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-slate-600 rounded-full flex justify-center pt-2">
-              <div className="w-1.5 h-3 bg-orange-500 rounded-full animate-bounce" />
-            </div>
           </div>
         </div>
       </div>

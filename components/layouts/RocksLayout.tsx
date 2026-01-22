@@ -20,7 +20,7 @@ export function RocksLayout({ children }: RocksLayoutProps) {
             <Link href="/" className="flex items-center gap-3">
               <span className="text-2xl">🪨</span>
               <div>
-                <span className="font-bold text-amber-500">kwokasch</span>
+                <span className="font-bold text-amber-500">katiewokasch</span>
                 <span className="text-stone-400">.rocks</span>
               </div>
             </Link>
