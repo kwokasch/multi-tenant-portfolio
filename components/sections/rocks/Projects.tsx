@@ -115,7 +115,7 @@ function RocksProjects() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            Field <span className="text-sandstone-500">Gallery</span>
+            Field <span className="text-emerald-500">Gallery</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl">
             A collection of field research, photography, and geological specimens
@@ -126,7 +126,7 @@ function RocksProjects() {
           {rocksProjects.map((project, i) => (
             <div
               key={i}
-              className="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:border-sandstone-500/50 transition-colors"
+              className="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-colors"
             >
               <div className="aspect-[4/3] relative">
                 <Image
@@ -138,12 +138,12 @@ function RocksProjects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-1 bg-sandstone-900/30 text-sandstone-400 rounded">
+                  <span className="text-xs px-2 py-1 bg-emerald-900/30 text-emerald-400 rounded">
                     {project.type}
                   </span>
                   <span className="text-xs text-zinc-500">{project.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-2 group-hover:text-sandstone-500 transition-colors">
+                <h3 className="text-xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-500 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-zinc-400 text-sm mb-3">{project.description}</p>

@@ -11,7 +11,7 @@ function RocksAbout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-4xl font-bold mb-8">
-              The <span className="text-sandstone-500">Story</span>
+              The <span className="text-emerald-500">Story</span>
             </h2>
             <div className="space-y-6 text-zinc-300">
               <p>
@@ -45,7 +45,7 @@ function RocksAbout() {
                   <p className="text-xs text-zinc-500 uppercase tracking-wider mb-1">
                     {item.label}
                   </p>
-                  <p className="text-sandstone-500 font-medium">{item.value}</p>
+                  <p className="text-emerald-500 font-medium">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -74,8 +74,8 @@ function RocksAbout() {
               </ul>
             </div>
 
-            <div className="bg-sandstone-900/20 border border-sandstone-700/30 rounded-xl p-6">
-              <p className="text-sandstone-400 text-sm italic">
+            <div className="bg-emerald-900/20 border border-emerald-700/30 rounded-xl p-6">
+              <p className="text-emerald-400 text-sm italic">
                 &ldquo;The Earth has a 4.5 billion year story to tell. I&apos;m just
                 here to listen and take notes.&rdquo;
               </p>
