@@ -20,14 +20,14 @@ export function RocksHero() {
         {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-sandstone-900/30 border border-sandstone-700/50 rounded-full text-sandstone-400 text-sm mb-6">
-              <span className="w-2 h-2 bg-sandstone-500 rounded-full animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-900/30 border border-emerald-700/50 rounded-full text-emerald-400 text-sm mb-6">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               Former geologist, lifelong nerd
             </div>
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               I collect rocks
               <br />
-              <span className="text-sandstone-500">and love to talk</span>
+              <span className="text-emerald-500">and love to talk</span>
               <br />
               about them
             </h1>
@@ -37,7 +37,7 @@ export function RocksHero() {
             <div className="flex flex-wrap gap-4">
               <a
                 href="/projects"
-                className="px-6 py-3 bg-sandstone-500 hover:bg-sandstone-400 text-zinc-900 font-semibold rounded transition-colors"
+                className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-semibold rounded transition-colors"
               >
                 View Gallery
               </a>
@@ -45,7 +45,7 @@ export function RocksHero() {
                 href="/images/rocks/research/Lehmann_Masters Thesis_2015.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 border border-zinc-600 hover:border-sandstone-500 text-zinc-300 hover:text-sandstone-500 rounded transition-colors flex items-center gap-2"
+                className="px-6 py-3 border border-zinc-600 hover:border-emerald-500 text-zinc-300 hover:text-emerald-500 rounded transition-colors flex items-center gap-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -69,7 +69,7 @@ export function RocksHero() {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs text-sandstone-500 font-mono uppercase tracking-wider">
+                  <span className="text-xs text-emerald-500 font-mono uppercase tracking-wider">
                     From the Field
                   </span>
                 </div>
@@ -82,8 +82,8 @@ export function RocksHero() {
               </div>
             </div>
             {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-sandstone-500/10 rounded-full blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-sandstone-500/5 rounded-full blur-3xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl" />
           </div>
         </div>
 
@@ -107,7 +107,7 @@ export function RocksHero() {
               className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 text-center"
             >
               <span className="text-2xl mb-2 block">{stat.icon}</span>
-              <p className="text-3xl font-bold text-sandstone-500 mb-1">
+              <p className="text-3xl font-bold text-emerald-500 mb-1">
                 {stat.value}
               </p>
               <p className="text-zinc-500 text-sm">{stat.label}</p>
