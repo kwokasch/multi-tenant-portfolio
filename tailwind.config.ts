@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +16,15 @@ const config: Config = {
           600: "#a33d3d",
           700: "#8c3434",
           900: "#5c2222",
+        },
+        navy: {
+          100: "#bbc5fc",
+          200: "#798dfc",
+          400: "#0021db",
+          500: "#001aad",
+          600: "#001380",
+          700: "#000e5e",
+          900: "#00093d",
         },
         // Rocks theme colors
         rocks: {
