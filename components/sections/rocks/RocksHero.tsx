@@ -4,10 +4,9 @@ import Image from "next/image";
 import { useTenant } from "@/lib/tenants/context";
 
 const funFacts = [
-  "Did you know? The oldest rock on Earth is ~4.4 billion years old",
-  "Hot take: Schist happens (literally, it's metamorphic)",
-  "Geologists: We really dig our work",
-  "I have a rock collection. It's not my fault, they're all so gneiss",
+  "There were TWO Rocky Mountain building events, one 300 million years ago and one 80 million years ago",
+  "There have been 5 mass extinction events in Earth's history: Ordovician, Devonian, Permian-Triassic ('Great Dying'), Triassic-Jurassic, and Cretaceous-Paleogene (K-Pg, ending the dinosaurs)",
+  "Humans are closer in time to T. rex than T. rex was to Stegosaurus!"
 ];
 
 export function RocksHero() {
@@ -60,7 +59,7 @@ export function RocksHero() {
             <div className="bg-zinc-800 border border-zinc-700 rounded-2xl overflow-hidden">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/rocks/LRG_DSC00312.JPG"
+                  src="/images/rocks/LRG_DSC00302.JPG"
                   alt="Field geology photo"
                   fill
                   className="object-cover"
@@ -74,11 +73,8 @@ export function RocksHero() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-zinc-100 mb-2">
-                  Field Work
+                  Andean Mountains, Peru
                 </h3>
-                <p className="text-zinc-400 text-sm">
-                  Exploring geological formations
-                </p>
               </div>
             </div>
             {/* Decorative elements */}
@@ -97,17 +93,17 @@ export function RocksHero() {
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
           {[
-            { label: "Field Sites Visited", value: "47", icon: "🗺️" },
-            { label: "Specimens Collected", value: "200+", icon: "💎" },
-            { label: "Papers Published", value: "1", icon: "📄" },
-            { label: "Puns Made", value: "∞", icon: "😅" },
+            { label: "Favorite Field Site", value: "Mount Olympus", icon: "🇬🇷" },
+            { label: "Favorite Rock", value: "Blue Schist", icon: "💎" },
+            { label: "Favorite Period", value: "Cretaceous", icon: "🦖" },
+            { label: "Dream Field Site", value: "The Himalayas", icon: "🏔️" },
           ].map((stat) => (
             <div
               key={stat.label}
               className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 text-center"
             >
               <span className="text-2xl mb-2 block">{stat.icon}</span>
-              <p className="text-3xl font-bold text-emerald-500 mb-1">
+              <p className="text-2xl font-bold text-emerald-500 mb-1">
                 {stat.value}
               </p>
               <p className="text-zinc-500 text-sm">{stat.label}</p>

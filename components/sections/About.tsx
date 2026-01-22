@@ -221,13 +221,13 @@ function SocialAbout() {
 
   return (
     <section>
-      <h2 className="text-2xl upper text-navy-900 dark:text-navy-100 font-medium tracking-tight mb-8 bg-gradient-to-r from-navy-600 dark:from-navy-200 to-navy-600/20 dark:to-navy-400/20 bg-clip-text text-transparent">
+      <h2 className="text-2xl upper font-semibold pb-2 text-navy-700 dark:text-navy-100 tracking-tight mb-8 bg-gradient-to-r from-navy-600 dark:from-navy-200 to-navy-600/20 dark:to-navy-400/20 bg-clip-text text-transparent">
         About Me
       </h2>
 
       <div className="space-y-6 text-navy-900/70 dark:text-navy-100/70 leading-relaxed">
         <p>
-          I&apos;m a writer and builder based in Denver, Colorado. Lately, I spend my
+          I&apos;m a software engineer and product builder based in Denver, Colorado. Lately, I spend my
           time thinking about the emergence of AI has unlocked new ways to experiment, build, and share ideas.
         </p>
         <p>

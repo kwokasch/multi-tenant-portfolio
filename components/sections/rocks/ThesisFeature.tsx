@@ -15,12 +15,12 @@ export function ThesisFeature() {
                   <div className="text-zinc-400 text-xs uppercase tracking-widest mb-4">
                     Master&apos;s Thesis
                   </div>
-                  <h3 className="text-zinc-800 text-lg font-serif leading-tight mb-6">
-                    Geological Research &amp; Analysis
+                  <h3 className="text-zinc-800 text-sm font-serif leading-tight mb-6 px-6">
+                    <span className="font-bold">Three-dimensional modeling of complex salt wall terminations in the Paradox Basin:</span> Implications for salt structure evolution,compartmentalizing fault trends and petroleum exploration
                   </h3>
                   <div className="w-16 h-0.5 bg-emerald-500 mb-6" />
                   <p className="text-zinc-500 text-sm">
-                    Katie Wokasch
+                    Katie Lehmann
                   </p>
                   <p className="text-zinc-400 text-xs mt-2">
                     2015
@@ -47,9 +47,7 @@ export function ThesisFeature() {
               Master&apos;s <span className="text-emerald-500">Thesis</span>
             </h2>
             <p className="text-zinc-300 text-lg mb-6 leading-relaxed">
-              My graduate research explored the geological history and structural
-              formations that shaped my understanding of Earth&apos;s dynamic processes.
-              This work combined extensive field research with laboratory analysis.
+              My graduate research explored the evolution of the salt wall structures in the Paradox Basin in Utah and Colorado. This work combined extensive field research with subsurface mapping and three-dimensional modeling.
             </p>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
@@ -57,7 +55,7 @@ export function ThesisFeature() {
                   <span className="text-emerald-400 text-xs">1</span>
                 </div>
                 <p className="text-zinc-400">
-                  Comprehensive field work across multiple geological sites
+                  Comprehensive field work across multiple sites
                 </p>
               </div>
               <div className="flex items-start gap-3">
@@ -65,7 +63,7 @@ export function ThesisFeature() {
                   <span className="text-emerald-400 text-xs">2</span>
                 </div>
                 <p className="text-zinc-400">
-                  Detailed stratigraphic analysis and sample collection
+                  Detailed structural and stratigraphic analysis
                 </p>
               </div>
               <div className="flex items-start gap-3">
@@ -73,7 +71,7 @@ export function ThesisFeature() {
                   <span className="text-emerald-400 text-xs">3</span>
                 </div>
                 <p className="text-zinc-400">
-                  Integration of field observations with laboratory data
+                  Integration of field observations with subsurface mapping
                 </p>
               </div>
             </div>
