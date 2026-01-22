@@ -52,7 +52,8 @@ export async function GET() {
     const posts: SubstackPost[] = [];
     
     // Extract items from RSS feed
-    const itemRegex = /<item>(.*?)<\/item>/gs;
+    // Using [\s\S] instead of . with 's' flag for better compatibility
+    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
     const items = xmlText.match(itemRegex) || [];
     
     // Limit to most recent 10 posts
