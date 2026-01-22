@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { headers } from "next/headers";
 import "./globals.css";
 import { TenantProvider } from "@/lib/tenants/context";
+import { ThemeProvider } from "@/lib/theme/context";
 import { getTenantBySlug } from "@/lib/tenants/config";
 import { TenantSlug } from "@/lib/tenants/types";
 import { DemoSwitcher } from "@/components/DemoSwitcher";
@@ -30,12 +31,14 @@ export default async function RootLayout({
   return (
     <html lang="en" data-theme={tenant.slug}>
       <body>
-        <TenantProvider tenant={tenant}>
-          {children}
-          <Suspense fallback={null}>
-            <DemoSwitcher />
-          </Suspense>
-        </TenantProvider>
+        <ThemeProvider>
+          <TenantProvider tenant={tenant}>
+            {children}
+            <Suspense fallback={null}>
+              <DemoSwitcher />
+            </Suspense>
+          </TenantProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

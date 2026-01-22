@@ -51,8 +51,8 @@ export const tenants: Record<TenantSlug, TenantConfig> = {
     slug: "social",
     name: "Katie Wokasch",
     domain: "katiewokasch.social",
-    tagline: "Writer & Builder",
-    description: "Connecting ideas across platforms",
+    tagline: "Full-Stack Product Builder",
+    description: "Building products and experiences that solve real problems",
     layout: "social",
     theme: {
       name: "social",

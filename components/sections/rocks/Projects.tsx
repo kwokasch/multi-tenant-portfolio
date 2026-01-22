@@ -223,14 +223,8 @@ function SocialProjects() {
   return (
     <section>
       <div className="mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-violet-100 rounded-full text-violet-600 text-sm mb-6">
-          <span className="text-lg">🚀</span>
-          <span>What I&apos;m working on</span>
-        </div>
-        <h2 className="text-2xl font-medium tracking-tight mb-4 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
-          Work
-        </h2>
-        <p className="text-neutral-500">
+        <h2 className="text-2xl font-semibold pb-2 text-navy-700 dark:text-navy-100">🚀 What I&apos;m working on</h2>
+        <p className="text-navy-600 dark:text-navy-200">
           Writing, projects, and things I&apos;m building.
         </p>
       </div>
@@ -238,18 +232,18 @@ function SocialProjects() {
         {socialProjects.map((project, i) => (
           <article
             key={i}
-            className="group p-6 bg-white/80 border border-violet-100 rounded-2xl hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all cursor-pointer"
+            className="group p-6 bg-white/80 border border-navy-100 rounded-2xl hover:border-navy-300 hover:shadow-lg hover:shadow-navy-100/50 transition-all cursor-pointer bg-white dark:bg-neutral-800"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-medium text-neutral-800 mb-1 group-hover:text-violet-600 transition-colors">
+                <h3 className="font-semibold text-navy-700 dark:text-navy-100 mb-1 group-hover:text-navy-600 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-neutral-500 text-sm">{project.description}</p>
+                <p className="text-navy-700/70 dark:text-navy-200/80 text-sm">{project.description}</p>
               </div>
               <div className="text-right shrink-0">
-                <p className="text-sm text-violet-400">{project.platform}</p>
-                <p className="text-sm font-medium text-pink-500">
+                <p className="text-sm text-navy-600 dark:text-navy-200/80">{project.platform}</p>
+                <p className="text-sm font-medium text-navy-600 dark:text-navy-200/80">
                   {project.subscribers || project.engagement}
                 </p>
               </div>
