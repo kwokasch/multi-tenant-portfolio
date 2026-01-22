@@ -115,9 +115,9 @@ function RocksProjects() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
           <h2 className="text-4xl font-bold mb-4">
-            Field <span className="text-amber-500">Gallery</span>
+            Field <span className="text-sandstone-500">Gallery</span>
           </h2>
-          <p className="text-stone-400 max-w-2xl">
+          <p className="text-zinc-400 max-w-2xl">
             A collection of field research, photography, and geological specimens
             from my time as a geologist.
           </p>
@@ -126,7 +126,7 @@ function RocksProjects() {
           {rocksProjects.map((project, i) => (
             <div
               key={i}
-              className="group bg-stone-800 border border-stone-700 rounded-xl overflow-hidden hover:border-amber-600/50 transition-colors"
+              className="group bg-zinc-800 border border-zinc-700 rounded-xl overflow-hidden hover:border-sandstone-500/50 transition-colors"
             >
               <div className="aspect-[4/3] relative">
                 <Image
@@ -138,16 +138,16 @@ function RocksProjects() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-1 bg-amber-900/30 text-amber-500 rounded">
+                  <span className="text-xs px-2 py-1 bg-sandstone-900/30 text-sandstone-400 rounded">
                     {project.type}
                   </span>
-                  <span className="text-xs text-stone-500">{project.date}</span>
+                  <span className="text-xs text-zinc-500">{project.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-stone-100 mb-2 group-hover:text-amber-500 transition-colors">
+                <h3 className="text-xl font-bold text-zinc-100 mb-2 group-hover:text-sandstone-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-stone-400 text-sm mb-3">{project.description}</p>
-                <p className="text-stone-500 text-xs">📍 {project.location}</p>
+                <p className="text-zinc-400 text-sm mb-3">{project.description}</p>
+                <p className="text-zinc-500 text-xs">📍 {project.location}</p>
               </div>
             </div>
           ))}
@@ -223,27 +223,33 @@ function SocialProjects() {
   return (
     <section>
       <div className="mb-12">
-        <h2 className="text-2xl font-medium tracking-tight mb-4">Work</h2>
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-violet-100 rounded-full text-violet-600 text-sm mb-6">
+          <span className="text-lg">🚀</span>
+          <span>What I&apos;m working on</span>
+        </div>
+        <h2 className="text-2xl font-medium tracking-tight mb-4 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+          Work
+        </h2>
         <p className="text-neutral-500">
-          Writing, projects, and things I&apos;m working on.
+          Writing, projects, and things I&apos;m building.
         </p>
       </div>
       <div className="space-y-6">
         {socialProjects.map((project, i) => (
           <article
             key={i}
-            className="group p-6 border border-neutral-200 rounded-lg hover:border-neutral-900 transition-colors cursor-pointer"
+            className="group p-6 bg-white/80 border border-violet-100 rounded-2xl hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all cursor-pointer"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h3 className="font-medium mb-1 group-hover:text-neutral-500 transition-colors">
+                <h3 className="font-medium text-neutral-800 mb-1 group-hover:text-violet-600 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-neutral-500 text-sm">{project.description}</p>
               </div>
               <div className="text-right shrink-0">
-                <p className="text-sm text-neutral-400">{project.platform}</p>
-                <p className="text-sm font-medium">
+                <p className="text-sm text-violet-400">{project.platform}</p>
+                <p className="text-sm font-medium text-pink-500">
                   {project.subscribers || project.engagement}
                 </p>
               </div>

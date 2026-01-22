@@ -12,40 +12,40 @@ export function RocksLayout({ children }: RocksLayoutProps) {
   const tenant = useTenant();
 
   return (
-    <div className="min-h-screen bg-stone-900 text-stone-100">
+    <div className="min-h-screen bg-zinc-900 text-zinc-100">
       {/* Navigation - Field notebook style */}
-      <nav className="sticky top-0 z-50 bg-stone-900/95 backdrop-blur border-b border-stone-700">
+      <nav className="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur border-b border-zinc-700">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="flex items-center gap-3">
               <span className="text-2xl">🪨</span>
               <div>
-                <span className="font-bold text-amber-500">katiewokasch</span>
-                <span className="text-stone-400">.rocks</span>
+                <span className="font-bold text-sandstone-500">katiewokasch</span>
+                <span className="text-zinc-400">.rocks</span>
               </div>
             </Link>
             <div className="flex items-center gap-6 text-sm">
               <Link
                 href="/"
-                className="text-stone-400 hover:text-amber-500 transition-colors"
+                className="text-zinc-400 hover:text-sandstone-500 transition-colors"
               >
                 Field Notes
               </Link>
               <Link
                 href="/projects"
-                className="text-stone-400 hover:text-amber-500 transition-colors"
+                className="text-zinc-400 hover:text-sandstone-500 transition-colors"
               >
                 Gallery
               </Link>
               <Link
                 href="/about"
-                className="text-stone-400 hover:text-amber-500 transition-colors"
+                className="text-zinc-400 hover:text-sandstone-500 transition-colors"
               >
                 About
               </Link>
               <a
                 href={`mailto:${tenant.socialLinks.email}`}
-                className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-stone-900 font-medium rounded transition-colors"
+                className="px-4 py-2 bg-sandstone-500 hover:bg-sandstone-400 text-zinc-900 font-medium rounded transition-colors"
               >
                 Contact
               </a>
@@ -58,19 +58,19 @@ export function RocksLayout({ children }: RocksLayoutProps) {
       <main>{children}</main>
 
       {/* Footer */}
-      <footer className="border-t border-stone-700 mt-24 py-12 px-6 bg-stone-900">
+      <footer className="border-t border-zinc-700 mt-24 py-12 px-6 bg-zinc-900">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center gap-4 text-stone-500 text-sm">
-              <span>Made with mass igneous enthusiasm</span>
+            <div className="flex items-center gap-4 text-zinc-500 text-sm">
+              <span>Made with igneous enthusiasm</span>
               <span>•</span>
               <span>&copy; {new Date().getFullYear()}</span>
             </div>
-            <div className="flex gap-4 text-stone-500">
+            <div className="flex gap-4 text-zinc-500">
               {tenant.socialLinks.github && (
                 <a
                   href={tenant.socialLinks.github}
-                  className="hover:text-amber-500 transition-colors"
+                  className="hover:text-sandstone-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -80,7 +80,7 @@ export function RocksLayout({ children }: RocksLayoutProps) {
               {tenant.socialLinks.twitter && (
                 <a
                   href={tenant.socialLinks.twitter}
-                  className="hover:text-amber-500 transition-colors"
+                  className="hover:text-sandstone-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

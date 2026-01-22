@@ -11,9 +11,9 @@ function RocksAbout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-4xl font-bold mb-8">
-              The <span className="text-amber-500">Story</span>
+              The <span className="text-sandstone-500">Story</span>
             </h2>
-            <div className="space-y-6 text-stone-300">
+            <div className="space-y-6 text-zinc-300">
               <p>
                 I spent years studying the Earth&apos;s history, hiking to remote
                 outcrops, and getting unreasonably excited about metamorphic
@@ -41,11 +41,11 @@ function RocksAbout() {
                 { label: "Rock Type", value: "Igneous (sorry)" },
                 { label: "Mohs Scale Rating", value: "Solid 7" },
               ].map((item) => (
-                <div key={item.label} className="bg-stone-800 border border-stone-700 rounded-lg p-4">
-                  <p className="text-xs text-stone-500 uppercase tracking-wider mb-1">
+                <div key={item.label} className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
+                  <p className="text-xs text-zinc-500 uppercase tracking-wider mb-1">
                     {item.label}
                   </p>
-                  <p className="text-amber-500 font-medium">{item.value}</p>
+                  <p className="text-sandstone-500 font-medium">{item.value}</p>
                 </div>
               ))}
             </div>
@@ -53,9 +53,9 @@ function RocksAbout() {
 
           {/* Visual Side */}
           <div className="space-y-6">
-            <div className="bg-stone-800 border border-stone-700 rounded-xl p-8">
+            <div className="bg-zinc-800 border border-zinc-700 rounded-xl p-8">
               <h3 className="text-lg font-bold mb-4">Field Kit Essentials</h3>
-              <ul className="space-y-3 text-stone-400">
+              <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-center gap-3">
                   <span>🔨</span> Rock hammer (Estwing, obviously)
                 </li>
@@ -74,8 +74,8 @@ function RocksAbout() {
               </ul>
             </div>
 
-            <div className="bg-amber-900/20 border border-amber-700/30 rounded-xl p-6">
-              <p className="text-amber-500 text-sm italic">
+            <div className="bg-sandstone-900/20 border border-sandstone-700/30 rounded-xl p-6">
+              <p className="text-sandstone-400 text-sm italic">
                 &ldquo;The Earth has a 4.5 billion year story to tell. I&apos;m just
                 here to listen and take notes.&rdquo;
               </p>
@@ -220,7 +220,13 @@ function SocialAbout() {
 
   return (
     <section>
-      <h2 className="text-2xl font-medium tracking-tight mb-8">About</h2>
+      <div className="inline-flex items-center gap-2 px-3 py-1 bg-violet-100 rounded-full text-violet-600 text-sm mb-6">
+        <span className="text-lg">🌟</span>
+        <span>A bit about me</span>
+      </div>
+      <h2 className="text-2xl font-medium tracking-tight mb-8 bg-gradient-to-r from-violet-600 to-pink-600 bg-clip-text text-transparent">
+        About
+      </h2>
 
       <div className="space-y-6 text-neutral-600 leading-relaxed">
         <p>
@@ -241,26 +247,26 @@ function SocialAbout() {
 
       {/* Links Section */}
       <div className="mt-12">
-        <h3 className="text-sm font-medium text-neutral-400 uppercase tracking-wider mb-6">
-          Find me elsewhere
+        <h3 className="text-sm font-semibold text-violet-600 uppercase tracking-wider mb-6 flex items-center gap-2">
+          <span>🔗</span> Find me elsewhere
         </h3>
         <div className="space-y-4">
           <a
             href={tenant.socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 transition-colors group"
+            className="flex items-center justify-between p-4 bg-white/80 border border-violet-100 rounded-2xl hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all group"
           >
             <div className="flex items-center gap-4">
               <svg className="w-5 h-5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
               </svg>
               <div>
-                <p className="font-medium">LinkedIn</p>
+                <p className="font-medium text-neutral-800">LinkedIn</p>
                 <p className="text-sm text-neutral-500">Professional updates</p>
               </div>
             </div>
-            <span className="text-neutral-400 group-hover:text-neutral-900 transition-colors">
+            <span className="text-violet-400 group-hover:text-violet-600 transition-colors">
               &rarr;
             </span>
           </a>
@@ -269,18 +275,18 @@ function SocialAbout() {
             href="https://substack.com/@kwokasch"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 transition-colors group"
+            className="flex items-center justify-between p-4 bg-white/80 border border-violet-100 rounded-2xl hover:border-pink-300 hover:shadow-lg hover:shadow-pink-100/50 transition-all group"
           >
             <div className="flex items-center gap-4">
               <svg className="w-5 h-5 text-[#FF6719]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
               </svg>
               <div>
-                <p className="font-medium">Substack</p>
+                <p className="font-medium text-neutral-800">Substack</p>
                 <p className="text-sm text-neutral-500">Long-form writing</p>
               </div>
             </div>
-            <span className="text-neutral-400 group-hover:text-neutral-900 transition-colors">
+            <span className="text-pink-400 group-hover:text-pink-600 transition-colors">
               &rarr;
             </span>
           </a>
@@ -289,36 +295,36 @@ function SocialAbout() {
             href={tenant.socialLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 transition-colors group"
+            className="flex items-center justify-between p-4 bg-white/80 border border-violet-100 rounded-2xl hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all group"
           >
             <div className="flex items-center gap-4">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
               <div>
-                <p className="font-medium">X / Twitter</p>
+                <p className="font-medium text-neutral-800">X / Twitter</p>
                 <p className="text-sm text-neutral-500">Quick thoughts</p>
               </div>
             </div>
-            <span className="text-neutral-400 group-hover:text-neutral-900 transition-colors">
+            <span className="text-violet-400 group-hover:text-violet-600 transition-colors">
               &rarr;
             </span>
           </a>
 
           <a
             href={`mailto:${tenant.socialLinks.email}`}
-            className="flex items-center justify-between p-4 border border-neutral-200 rounded-lg hover:border-neutral-900 transition-colors group"
+            className="flex items-center justify-between p-4 bg-white/80 border border-violet-100 rounded-2xl hover:border-violet-300 hover:shadow-lg hover:shadow-violet-100/50 transition-all group"
           >
             <div className="flex items-center gap-4">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
               <div>
-                <p className="font-medium">Email</p>
+                <p className="font-medium text-neutral-800">Email</p>
                 <p className="text-sm text-neutral-500">{tenant.socialLinks.email}</p>
               </div>
             </div>
-            <span className="text-neutral-400 group-hover:text-neutral-900 transition-colors">
+            <span className="text-violet-400 group-hover:text-violet-600 transition-colors">
               &rarr;
             </span>
           </a>

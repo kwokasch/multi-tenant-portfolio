@@ -8,10 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Sandstone color palette for rocks theme
+        sandstone: {
+          400: "#c96666",
+          500: "#ba4747",
+          600: "#a33d3d",
+          700: "#8c3434",
+          900: "#5c2222",
+        },
         // Rocks theme colors
         rocks: {
           bg: "#0a0a0a",
-          accent: "#FF6B35",
+          accent: "#ba4747",
           secondary: "#00D4FF",
         },
         // Engineer theme colors
