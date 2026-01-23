@@ -23,6 +23,7 @@ export interface TenantConfig {
     github?: string;
     linkedin?: string;
     blueSky?: string;
+    twitter?: string;
     email?: string;
   };
 }
