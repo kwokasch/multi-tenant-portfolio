@@ -78,7 +78,7 @@ const engineerProjects = [
     link: "https://github.com/kwokasch/lost-pet-finder",
   },
   {
-    title: "Bachelorette App Test",
+    title: "Bachelorette App",
     description: "Fun vibe app for coordinating my sister's bachelorette party",
     tech: ["React", "NodeJS", "Lovable", "Supabase"],
     type: "Personal Project",
