@@ -20,7 +20,8 @@ export const tenants: Record<TenantSlug, TenantConfig> = {
     },
     socialLinks: {
       github: "https://github.com/kwokasch",
-      twitter: "https://twitter.com/kwokasch",
+      linkedin: "https://linkedin.com/in/kwokasch",
+      blueSky: "https://bsky.app/profile/kwokasch.bsky.social",
       email: "katie@katiewokasch.rocks",
     },
   },

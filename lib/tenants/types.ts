@@ -22,7 +22,7 @@ export interface TenantConfig {
   socialLinks: {
     github?: string;
     linkedin?: string;
-    twitter?: string;
+    blueSky?: string;
     email?: string;
   };
 }

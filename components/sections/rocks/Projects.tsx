@@ -3,55 +3,61 @@
 import Image from "next/image";
 import { useTenant } from "@/lib/tenants/context";
 
-// Geology field photos/research
+// Geology field photos/research - update map images for each location
 const rocksProjects = [
   {
-    title: "Field Research",
-    description: "Documenting geological formations and collecting samples in the field",
-    location: "Various Locations",
-    date: "2015",
-    type: "Field Work",
+    title: "Andean Field Research",
+    description: "Documenting geological formations and collecting samples in the Peruvian Andes",
+    location: "Cusco, Peru",
+    date: "2018",
+    type: "Exploration",
     image: "/images/rocks/LRG_DSC00302.JPG",
+    mapImage: "/images/rocks/maps/peru.jpg",
   },
   {
-    title: "Rock Formations",
-    description: "Capturing the beauty of natural geological structures",
-    location: "Field Site",
+    title: "Paradox Basin Formations",
+    description: "Salt wall structures and evaporite deposits in the Colorado Plateau",
+    location: "Moab, Utah",
     date: "2015",
-    type: "Photography",
-    image: "/images/rocks/LRG_DSC00357.JPG",
+    type: "Thesis Research",
+    image: "/images/rocks/OnionCreek1-1030x773.jpg",
+    mapImage: "/images/rocks/maps/moab.jpg",
   },
   {
     title: "Outcrop Analysis",
     description: "Studying exposed rock layers and their depositional history",
-    location: "Field Site",
+    location: "Naturita, CO",
     date: "2015",
-    type: "Field Study",
-    image: "/images/rocks/LRG_DSC00430.JPG",
+    type: "Thesis Research",
+    image: "/images/rocks/gypsum-valley.png",
+    mapImage: "/images/rocks/maps/naturita.jpg",
   },
   {
-    title: "Specimen Collection",
-    description: "Gathering samples for laboratory analysis and research",
-    location: "Field Site",
-    date: "2015",
-    type: "Research",
+    title: "Erosion Analysis",
+    description: "Observing modern-day erosion",
+    location: "Ouray, Colorado",
+    date: "2022",
+    type: "Exploration",
     image: "/images/rocks/LRG_DSC01201.JPG",
+    mapImage: "/images/rocks/maps/ouray.jpg",
   },
   {
-    title: "Geological Survey",
-    description: "Mapping and documenting geological features in the region",
-    location: "Field Site",
+    title: "Seismic Interpretation",
+    description: "Interpreting seismic data",
+    location: "Gulf of Mexico",
     date: "2015",
-    type: "Survey",
-    image: "/images/rocks/LRG_DSC02324.JPG",
+    type: "Interpretation",
+    image: "/images/rocks/seismic.png",
+    mapImage: "/images/rocks/maps/gom.jpg",
   },
   {
-    title: "Landscape Documentation",
-    description: "Recording the broader geological context of study areas",
-    location: "Field Site",
-    date: "2015",
+    title: "'Research' with my favorite geologist",
+    description: "Honeymooning in New Zealand",
+    location: "Queenstown, NZ",
+    date: "2019",
     type: "Photography",
-    image: "/images/rocks/ORG_DSC02616.JPG",
+    image: "/images/rocks/LRG_DSC02324.JPG",
+    mapImage: "/images/rocks/maps/nz.jpg",
   },
 ];
 
@@ -136,18 +142,31 @@ function RocksProjects() {
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
+              <div className="p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs px-2 py-1 bg-emerald-900/30 text-emerald-400 rounded">
                     {project.type}
                   </span>
                   <span className="text-xs text-zinc-500">{project.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-100 mb-2 group-hover:text-emerald-500 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-zinc-400 text-sm mb-3">{project.description}</p>
-                <p className="text-zinc-500 text-xs">📍 {project.location}</p>
+                <div className="flex gap-3">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-zinc-100 mb-2 group-hover:text-emerald-500 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-zinc-400 text-sm mb-2">{project.description}</p>
+                    <p className="text-zinc-500 text-xs">📍 {project.location}</p>
+                  </div>
+                  <div className="w-24 h-24 rounded-lg overflow-hidden border border-zinc-600 flex-shrink-0">
+                    <Image
+                      src={project.mapImage}
+                      alt={`Map of ${project.location}`}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
