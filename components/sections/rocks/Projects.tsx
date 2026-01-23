@@ -66,16 +66,23 @@ const engineerProjects = [
   {
     title: "Multi-Tenant Portfolio",
     description: "This very site! A multi-tenant Next.js app serving different portfolio experiences from custom domains with dynamic theming.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     type: "Personal Project",
     link: "https://github.com/kwokasch",
   },
   {
     title: "Lost Pet Finder",
     description: "Helps reunite lost pets with their owners through community-powered search, shelter data scraping, and AI image recognition.",
-    tech: ["React", "Python", "PostgreSQL"],
+    tech: ["React", "Python", "PostgreSQL", "Claude Code"],
     type: "Personal Project",
     link: "https://github.com/kwokasch/lost-pet-finder",
+  },
+  {
+    title: "Bachelorette App",
+    description: "Fun vibe app for coordinating my sister's bachelorette party",
+    tech: ["React", "NodeJS", "Lovable", "Supabase"],
+    type: "Personal Project",
+    link: "https://github.com/kwokasch/becky-bachelorette"
   }
 ];
 
