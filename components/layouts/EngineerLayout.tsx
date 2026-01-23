@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { useTenant } from "@/lib/tenants/context";
 import Link from "next/link";
 
@@ -10,6 +10,7 @@ interface EngineerLayoutProps {
 
 export function EngineerLayout({ children }: EngineerLayoutProps) {
   const tenant = useTenant();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200">
@@ -24,7 +25,8 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
                 <span className="text-slate-500">.engineer</span>
               </div>
             </Link>
-            <div className="flex items-center gap-1">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-1">
               <Link
                 href="/"
                 className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
@@ -58,7 +60,68 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
                 Contact me 
               </a>
             </div>
+            {/* Mobile Hamburger Button */}
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-slate-400 hover:text-orange-500 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-slate-700 pt-4">
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/projects"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
+                >
+                  About
+                </Link>
+                <a
+                  href={tenant.socialLinks.github}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={`mailto:${tenant.socialLinks.email}`}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-2 bg-orange-500 hover:bg-orange-400 text-slate-900 font-medium rounded-lg transition-colors text-sm w-fit"
+                >
+                  Contact me
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 

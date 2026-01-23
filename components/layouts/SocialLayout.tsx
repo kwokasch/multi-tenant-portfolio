@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { useTenant } from "@/lib/tenants/context";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,6 +12,7 @@ interface SocialLayoutProps {
 
 export function SocialLayout({ children }: SocialLayoutProps) {
   const tenant = useTenant();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-navy-50 via-white to-pink-50 dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900 text-neutral-900 dark:text-neutral-100 transition-colors">
@@ -33,7 +34,8 @@ export function SocialLayout({ children }: SocialLayoutProps) {
                 <span className="text-navy-700/50 dark:text-navy-100/70">.social</span>
               </div>
             </Link>
-            <div className="flex items-center gap-6 text-sm">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6 text-sm">
               <Link
                 href="/"
                 className="text-navy-700 dark:text-navy-100 hover:text-navy-600 dark:hover:text-navy-200 transition-colors"
@@ -60,7 +62,62 @@ export function SocialLayout({ children }: SocialLayoutProps) {
                 Email me
               </a>
             </div>
+            {/* Mobile Hamburger Button */}
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 text-navy-700 dark:text-navy-100 hover:text-navy-600 dark:hover:text-navy-200 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
+          {/* Mobile Menu */}
+          {isMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-navy-100 dark:border-navy-200 pt-4">
+              <div className="flex flex-col gap-4">
+                <Link
+                  href="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-navy-700 dark:text-navy-100 hover:text-navy-600 dark:hover:text-navy-200 transition-colors text-sm"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/projects"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-navy-700 dark:text-navy-100 hover:text-navy-600 dark:hover:text-navy-200 transition-colors text-sm"
+                >
+                  Work
+                </Link>
+                <Link
+                  href="/about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-navy-700 dark:text-navy-100 hover:text-navy-600 dark:hover:text-navy-200 transition-colors text-sm"
+                >
+                  About
+                </Link>
+                <div className="flex items-center gap-4">
+                  <ThemeToggle />
+                  <a
+                    href={`mailto:${tenant.socialLinks.email}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="px-4 py-2 bg-navy-400/70 dark:bg-navy-200 hover:bg-navy-700 dark:hover:bg-navy-100 text-white dark:text-neutral-900 rounded-full text-sm font-medium transition-colors w-fit"
+                  >
+                    Email me
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 

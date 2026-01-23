@@ -20,8 +20,8 @@ function RocksAbout() {
     offset: ["start start", "end start"],
   });
 
-  // Transform scroll progress to scale (starts smaller, zooms in as you scroll)
-  const imageScale = useTransform(scrollYProgress, [0, 1], [0.9, 1.4]);
+  // Transform scroll progress to scale (starts small, expands to fill container as you scroll)
+  const imageScale = useTransform(scrollYProgress, [0, 1], [0.75, 1.3]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.5], [0.2, 1]);
 
   // useInView for text reveal animations

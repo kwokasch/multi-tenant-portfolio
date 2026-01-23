@@ -64,20 +64,6 @@ const rocksProjects = [
 // Dev projects - professional focus
 const engineerProjects = [
   {
-    title: "Domain API Platform",
-    description: "Built a developer-friendly API platform for domain registration and management at Name.com, improving partner integration experience.",
-    tech: ["TypeScript", "Node.js", "PostgreSQL"],
-    type: "Professional",
-    link: "https://www.name.com/partner",
-  },
-  {
-    title: "Homeward Bound",
-    description: "A pet recovery platform built during Flatiron School bootcamp. Helps reunite lost pets with their owners through community-powered search.",
-    tech: ["React", "Ruby on Rails", "PostgreSQL"],
-    type: "Bootcamp Project",
-    link: null,
-  },
-  {
     title: "Multi-Tenant Portfolio",
     description: "This very site! A multi-tenant Next.js app serving different portfolio experiences from custom domains with dynamic theming.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -85,12 +71,12 @@ const engineerProjects = [
     link: "https://github.com/kwokasch",
   },
   {
-    title: "Developer Tools",
-    description: "Internal tooling and automation scripts that improved team workflows and reduced manual processes at various companies.",
-    tech: ["Python", "Bash", "GitHub Actions"],
-    type: "Professional",
-    link: null,
-  },
+    title: "Lost Pet Finder",
+    description: "Helps reunite lost pets with their owners through community-powered search, shelter data scraping, and AI image recognition.",
+    tech: ["React", "Python", "PostgreSQL"],
+    type: "Personal Project",
+    link: "https://github.com/kwokasch/lost-pet-finder",
+  }
 ];
 
 // Social/writing projects
