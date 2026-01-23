@@ -97,3 +97,38 @@ export function getTenantByDomain(domain: string): TenantConfig {
 export function getTenantBySlug(slug: TenantSlug): TenantConfig {
   return tenants[slug];
 }
+
+// Helper function to determine tenant from hostname with flexible matching
+export function getTenantSlugFromHostname(hostname: string): TenantSlug {
+  if (!hostname) return "rocks";
+  
+  // Normalize hostname: remove port, remove www, lowercase
+  const normalized = hostname
+    .toLowerCase()
+    .replace(/^www\./, "")
+    .split(":")[0];
+  
+  // Try exact match first
+  if (domainToTenant[hostname]) {
+    return domainToTenant[hostname];
+  }
+  
+  // Try normalized match
+  if (domainToTenant[normalized]) {
+    return domainToTenant[normalized];
+  }
+  
+  // Try substring matching for production environments
+  if (normalized.includes("katiewokasch.engineer")) {
+    return "engineer";
+  }
+  if (normalized.includes("katiewokasch.social")) {
+    return "social";
+  }
+  if (normalized.includes("katiewokasch.rocks")) {
+    return "rocks";
+  }
+  
+  // Default fallback
+  return "rocks";
+}

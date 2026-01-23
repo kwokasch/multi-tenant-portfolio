@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { domainToTenant } from "./lib/tenants/config";
+import { getTenantSlugFromHostname } from "./lib/tenants/config";
 
 export function middleware(request: NextRequest) {
-  const hostname = request.headers.get("host") || "";
+  // Get hostname from various sources (production environments may use different headers)
+  const hostHeader = request.headers.get("host") || "";
+  const forwardedHost = request.headers.get("x-forwarded-host") || "";
+  const urlHostname = request.nextUrl.hostname || "";
   
-  // Determine tenant based on domain
-  const tenantSlug = domainToTenant[hostname] || "rocks";
+  // Use the first available hostname source
+  const hostname = hostHeader || forwardedHost || urlHostname;
+  
+  // Determine tenant based on domain using robust matching
+  const tenantSlug = getTenantSlugFromHostname(hostname);
 
   // Clone the request headers and add tenant info
   const requestHeaders = new Headers(request.headers);

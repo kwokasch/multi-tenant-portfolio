@@ -6,6 +6,9 @@ import { ThemeProvider } from "@/lib/theme/context";
 import { getTenantBySlug } from "@/lib/tenants/config";
 import { TenantSlug } from "@/lib/tenants/types";
 
+// Force dynamic rendering to ensure middleware runs
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
   const tenantSlug = (headersList.get("x-tenant") || "rocks") as TenantSlug;
