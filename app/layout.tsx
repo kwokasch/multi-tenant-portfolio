@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { headers } from "next/headers";
 import "./globals.css";
 import { TenantProvider } from "@/lib/tenants/context";
 import { ThemeProvider } from "@/lib/theme/context";
 import { getTenantBySlug } from "@/lib/tenants/config";
 import { TenantSlug } from "@/lib/tenants/types";
-import { DemoSwitcher } from "@/components/DemoSwitcher";
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
@@ -34,9 +32,6 @@ export default async function RootLayout({
         <ThemeProvider>
           <TenantProvider tenant={tenant}>
             {children}
-            <Suspense fallback={null}>
-              <DemoSwitcher />
-            </Suspense>
           </TenantProvider>
         </ThemeProvider>
       </body>
