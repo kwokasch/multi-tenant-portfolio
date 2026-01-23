@@ -11,6 +11,14 @@ export interface TenantTheme {
   border: string;
 }
 
+export interface SocialLinks {
+  github?: string;
+  linkedin?: string;
+  blueSky?: string;
+  twitter?: string;
+  email?: string;
+}
+
 export interface TenantConfig {
   slug: TenantSlug;
   name: string;
@@ -19,11 +27,5 @@ export interface TenantConfig {
   description: string;
   theme: TenantTheme;
   layout: "rocks" | "engineer" | "social";
-  socialLinks: {
-    github?: string;
-    linkedin?: string;
-    blueSky?: string;
-    twitter?: string;
-    email?: string;
-  };
+  socialLinks: SocialLinks;
 }
