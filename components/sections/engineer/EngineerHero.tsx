@@ -68,7 +68,7 @@ export function EngineerHero() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Manager, Product Engineering            
+              Senior Software Engineer            
             </p>
 
             <p

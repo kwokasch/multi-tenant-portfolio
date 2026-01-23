@@ -187,8 +187,7 @@ function EngineerAbout() {
               I&apos;m a full-stack software engineer with a life-long passion for learning how things work. Whether it&apos;s building software, learning new technologies, or exploring the natural world, I&apos;ve never been satisfied with taking things at face value.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              Today, I work at Name.com as a Product Engineer and Manager, where I
-              lead a team of product managers and engineers to build the best products and experiences for our users.
+              Today, I work at Name.com as a Senior Software Engineer, where I work with an awesome team to build the best products and experiences for our users.
             </p>
 
             {/* Key highlights */}
@@ -199,7 +198,7 @@ function EngineerAbout() {
               <ul className="space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
                   <span className="text-orange-500 mt-1">→</span>
-                  <span>Product Engineer and Manager at Name.com, focused on building the best products and experiences for our users</span>
+                  <span>Senior Software Engineer at Name.com, focused on building the best products and experiences for our users</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-orange-500 mt-1">→</span>

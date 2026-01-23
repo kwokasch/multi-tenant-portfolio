@@ -14,15 +14,15 @@ interface TimelineEntry {
 }
 
 const timelineData: TimelineEntry[] = [
-  {
-    year: "2026 - Present",
-    title: "Manager, Product Engineering",
-    company: "Name.com",
-    description:
-      "Bridging the gap between product and engineering. Leading a team of product managers and engineers to build the best products and experiences for our users.",
-    type: "work",
-    logo: "/images/engineer/name-logo.jpg",
-  },
+  // {
+  //   year: "2026 - Present",
+  //   title: "Manager, Product Engineering",
+  //   company: "Name.com",
+  //   description:
+  //     "Bridging the gap between product and engineering. Leading a team of product managers and engineers to build the best products and experiences for our users.",
+  //   type: "work",
+  //   logo: "/images/engineer/name-logo.jpg",
+  // },
   {
     year: "2023 - 2026",
     title: "Senior Software Engineer",
