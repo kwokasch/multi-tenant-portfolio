@@ -136,8 +136,10 @@ export function RocksHero() {
                       src={photo.src}
                       alt={photo.title}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                       priority={index === 0}
+                      quality={index === 0 ? 90 : 85}
                     />
                   </div>
                 ))}

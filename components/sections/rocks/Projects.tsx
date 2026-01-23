@@ -125,7 +125,10 @@ function RocksProjects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  quality={85}
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">
@@ -150,6 +153,8 @@ function RocksProjects() {
                       width={80}
                       height={80}
                       className="w-full h-full object-cover"
+                      quality={75}
+                      loading="lazy"
                     />
                   </div>
                 </div>

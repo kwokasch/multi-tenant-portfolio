@@ -40,8 +40,10 @@ function RocksAbout() {
             src="/images/rocks/IMG_7612.jpeg"
             alt="Geology fieldwork"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
+            quality={90}
           />
         </motion.div>
         {/* Gradient overlay that fades in as you scroll */}
