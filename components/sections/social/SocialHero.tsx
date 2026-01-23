@@ -25,47 +25,24 @@ export function SocialHero() {
   const tenant = useTenant();
   const [linkedInPosts, setLinkedInPosts] = useState<LinkedInPost[]>([
     {
-      title: "Thoughts on building in public",
-      excerpt: "Why sharing your journey matters more than the destination...",
+      title: "name.com has been included on the “Best Place to Work” award in Colorado",
+      excerpt: "Incredibly proud to be part of this company, we’ve got another amazing year in store 🎉",
       likes: 142,
       comments: 23,
       date: "2d ago",
+      url: "https://www.linkedin.com/posts/kwokasch_bptw2026-2026builtinbest-activity-7419875105805107200-qoLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
     },
     {
-      title: "The power of saying no",
-      excerpt: "How I learned to prioritize and why it changed everything...",
+      title: "Our API team is hard at work",
+      excerpt: "Our API team is hard at work building a best-in-class developer experience, making it easier than ever for partners to search for domains and help users bring their businesses online.",
       likes: 89,
       comments: 15,
       date: "1w ago",
+      url: "https://www.linkedin.com/posts/kwokasch_claims-flow-namecom-core-api-activity-7417220994983153664-4LF0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
     },
   ]);
   const [isLoadingPosts, setIsLoadingPosts] = useState(false);
-  const [substackPosts, setSubstackPosts] = useState<SubstackPost[]>([
-    {
-      title: "On creativity and constraints",
-      excerpt:
-        "Exploring how limitations can actually fuel innovation and lead to better outcomes.",
-      readTime: "5 min",
-      date: "Jan 15",
-      url: "https://substack.com/@kwokasch",
-    },
-    {
-      title: "The quiet art of observation",
-      excerpt:
-        "What I learned from spending a month paying attention to the small things.",
-      readTime: "4 min",
-      date: "Jan 8",
-      url: "https://substack.com/@kwokasch",
-    },
-    {
-      title: "Building your second brain",
-      excerpt:
-        "A practical guide to organizing thoughts and ideas for creative work.",
-      readTime: "7 min",
-      date: "Dec 28",
-      url: "https://substack.com/@kwokasch",
-    },
-  ]);
+  const [substackPosts, setSubstackPosts] = useState<SubstackPost[]>([]);
   const [isLoadingSubstack, setIsLoadingSubstack] = useState(false);
 
   useEffect(() => {
@@ -185,7 +162,7 @@ export function SocialHero() {
               </div>
             ) : substackPosts.length === 0 ? (
               <div className="py-4">
-                <p className="text-navy-700/70 dark:text-navy-100/70 text-sm">No posts available</p>
+                <p className="text-navy-700/70 dark:text-navy-100/70 text-sm italic">Stay tuned for content</p>
               </div>
             ) : (
               substackPosts.map((post, i) => (

@@ -80,26 +80,15 @@ const engineerProjects = [
 ];
 
 // Social/writing projects
-const socialProjects = [
-  {
-    title: "Building in Public",
-    description: "A 12-part series on sharing your work journey",
-    platform: "Substack",
-    subscribers: "2.3k",
-  },
-  {
-    title: "The Weekly Observer",
-    description: "Curated thoughts on tech, design, and life",
-    platform: "Newsletter",
-    subscribers: "1.8k",
-  },
-  {
-    title: "Design Systems Decoded",
-    description: "Breaking down complex design patterns for everyone",
-    platform: "LinkedIn",
-    engagement: "50k views",
-  },
-];
+type SocialProject = {
+  title: string;
+  description: string;
+  platform: string;
+  subscribers?: string;
+  engagement?: string;
+};
+
+const socialProjects: SocialProject[] = [];
 
 function RocksProjects() {
   return (
@@ -238,29 +227,41 @@ function SocialProjects() {
           Writing, projects, and things I&apos;m building.
         </p>
       </div>
-      <div className="space-y-6">
-        {socialProjects.map((project, i) => (
-          <article
-            key={i}
-            className="group p-6 bg-white/80 border border-navy-100 rounded-2xl hover:border-navy-300 hover:shadow-lg hover:shadow-navy-100/50 transition-all cursor-pointer bg-white dark:bg-neutral-800"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <h3 className="font-semibold text-navy-700 dark:text-navy-100 mb-1 group-hover:text-navy-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-navy-700/70 dark:text-navy-200/80 text-sm">{project.description}</p>
+      {socialProjects.length === 0 ? (
+        <div className="p-12 bg-white/80 border border-navy-100 rounded-2xl text-center bg-white dark:bg-neutral-800 dark:border-neutral-700">
+          <div className="text-3xl mb-4">📚💻💡</div>
+          <h3 className="text-xl font-semibold text-navy-700 dark:text-navy-100 mb-2">
+            Content Coming Soon
+          </h3>
+          <p className="text-navy-600/70 dark:text-navy-200/70">
+            I&apos;m working on some exciting projects. Check back soon!
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-6">
+          {socialProjects.map((project, i) => (
+            <article
+              key={i}
+              className="group p-6 bg-white/80 border border-navy-100 rounded-2xl hover:border-navy-300 hover:shadow-lg hover:shadow-navy-100/50 transition-all cursor-pointer bg-white dark:bg-neutral-800"
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="font-semibold text-navy-700 dark:text-navy-100 mb-1 group-hover:text-navy-600 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-navy-700/70 dark:text-navy-200/80 text-sm">{project.description}</p>
+                </div>
+                <div className="text-right shrink-0">
+                  <p className="text-sm text-navy-600 dark:text-navy-200/80">{project.platform}</p>
+                  <p className="text-sm font-medium text-navy-600 dark:text-navy-200/80">
+                    {project.subscribers || project.engagement}
+                  </p>
+                </div>
               </div>
-              <div className="text-right shrink-0">
-                <p className="text-sm text-navy-600 dark:text-navy-200/80">{project.platform}</p>
-                <p className="text-sm font-medium text-navy-600 dark:text-navy-200/80">
-                  {project.subscribers || project.engagement}
-                </p>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+            </article>
+          ))}
+        </div>
+      )}
     </section>
   );
 }

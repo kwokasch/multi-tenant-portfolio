@@ -45,6 +45,7 @@ export async function GET() {
     // you can manually update the placeholder data in SocialHero.tsx instead.
     // This API route will return empty array, and the component will use fallback data.
     if (!accessToken || !personUrn) {
+      console.log('LinkedIn API: Missing credentials. Using fallback data.');
       // Return empty array - component will use fallback placeholder data
       return NextResponse.json({ posts: [] }, {
         headers: {
@@ -53,9 +54,8 @@ export async function GET() {
       });
     }
 
-    // Fetch UGC posts from LinkedIn API v2
-    // Note: This requires proper OAuth setup and may need different endpoints based on your LinkedIn app permissions
-    const response = await fetch(
+    // Try UGC Posts API first (for personal posts)
+    let response = await fetch(
       `https://api.linkedin.com/v2/ugcPosts?q=authors&authors=List(${encodeURIComponent(personUrn)})&count=10`,
       {
         headers: {
@@ -65,8 +65,25 @@ export async function GET() {
       }
     );
 
+    // If UGC Posts API fails, try Share API as fallback
+    if (!response.ok && response.status === 403) {
+      console.log('UGC Posts API not available, trying Share API...');
+      // Get your profile ID from personUrn
+      const profileId = personUrn.replace('urn:li:person:', '');
+      response = await fetch(
+        `https://api.linkedin.com/v2/shares?q=owners&owners=List(${encodeURIComponent(personUrn)})&count=10`,
+        {
+          headers: {
+            'Authorization': `Bearer ${accessToken}`,
+            'X-Restli-Protocol-Version': '2.0.0',
+          },
+        }
+      );
+    }
+
     if (!response.ok) {
-      console.error('LinkedIn API error:', response.status, response.statusText);
+      const errorText = await response.text().catch(() => 'Unknown error');
+      console.error('LinkedIn API error:', response.status, response.statusText, errorText);
       return NextResponse.json({ posts: [] }, {
         headers: {
           'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
@@ -77,19 +94,37 @@ export async function GET() {
     const data = await response.json();
     
     // Transform LinkedIn API response to our format
+    // Handle both UGC Posts and Share API responses
     const posts: LinkedInPost[] = (data.elements || []).map((post: any) => {
-      const text = post.specificContent?.shareContent?.shareCommentary?.text || '';
+      // UGC Posts API structure
+      let text = post.specificContent?.shareContent?.shareCommentary?.text || '';
+      let createdAt = post.created?.time ? new Date(post.created.time) : new Date();
+      let postId = post.id || '';
+      let permalink = post.permalink;
+      let numLikes = post.numLikes || 0;
+      let numComments = post.numComments || 0;
+
+      // Share API structure (fallback)
+      if (!text && post.text) {
+        text = post.text.text || '';
+      }
+      if (!createdAt && post.created) {
+        createdAt = new Date(post.created.time);
+      }
+      if (!postId && post.id) {
+        postId = post.id;
+      }
+
       const { title, excerpt } = parseLinkedInPost(text);
-      const createdAt = post.created?.time ? new Date(post.created.time) : new Date();
       
       return {
-        id: post.id || '',
+        id: postId,
         title,
         excerpt,
-        likes: post.numLikes || 0,
-        comments: post.numComments || 0,
+        likes: numLikes,
+        comments: numComments,
         date: formatRelativeDate(createdAt),
-        url: post.permalink || undefined,
+        url: permalink || undefined,
       };
     });
 
