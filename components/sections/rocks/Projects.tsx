@@ -11,8 +11,8 @@ const rocksProjects = [
     location: "Cusco, Peru",
     date: "2018",
     type: "Exploration",
-    image: "/images/rocks/LRG_DSC00302.JPG",
-    mapImage: "/images/rocks/maps/peru.jpg",
+    image: "/images/rocks/LRG_DSC00302.webp",
+    mapImage: "/images/rocks/maps/peru.webp",
   },
   {
     title: "Paradox Basin Formations",
@@ -20,8 +20,8 @@ const rocksProjects = [
     location: "Moab, Utah",
     date: "2015",
     type: "Thesis Research",
-    image: "/images/rocks/OnionCreek1-1030x773.jpg",
-    mapImage: "/images/rocks/maps/moab.jpg",
+    image: "/images/rocks/OnionCreek1-1030x773.webp",
+    mapImage: "/images/rocks/maps/moab.webp",
   },
   {
     title: "Outcrop Analysis",
@@ -29,8 +29,8 @@ const rocksProjects = [
     location: "Naturita, CO",
     date: "2015",
     type: "Thesis Research",
-    image: "/images/rocks/gypsum-valley.png",
-    mapImage: "/images/rocks/maps/naturita.jpg",
+    image: "/images/rocks/gypsum-valley.webp",
+    mapImage: "/images/rocks/maps/naturita.webp",
   },
   {
     title: "Erosion Analysis",
@@ -38,8 +38,8 @@ const rocksProjects = [
     location: "Ouray, Colorado",
     date: "2022",
     type: "Exploration",
-    image: "/images/rocks/LRG_DSC01201.JPG",
-    mapImage: "/images/rocks/maps/ouray.jpg",
+    image: "/images/rocks/LRG_DSC01201.webp",
+    mapImage: "/images/rocks/maps/ouray.webp",
   },
   {
     title: "Seismic Interpretation",
@@ -47,8 +47,8 @@ const rocksProjects = [
     location: "Gulf of Mexico",
     date: "2015",
     type: "Interpretation",
-    image: "/images/rocks/seismic.png",
-    mapImage: "/images/rocks/maps/gom.jpg",
+    image: "/images/rocks/seismic.webp",
+    mapImage: "/images/rocks/maps/gom.webp",
   },
   {
     title: "'Research' with my favorite geologist",
@@ -56,8 +56,8 @@ const rocksProjects = [
     location: "Queenstown, NZ",
     date: "2019",
     type: "Photography",
-    image: "/images/rocks/LRG_DSC02324.JPG",
-    mapImage: "/images/rocks/maps/nz.jpg",
+    image: "/images/rocks/LRG_DSC02324.webp",
+    mapImage: "/images/rocks/maps/nz.webp",
   },
 ];
 

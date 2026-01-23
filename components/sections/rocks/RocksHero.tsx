@@ -8,7 +8,7 @@ import { useState, useEffect, useCallback } from "react";
 const fieldPhotos = [
   {
     id: 1,
-    src: "/images/rocks/LRG_DSC00302.JPG",
+    src: "/images/rocks/LRG_DSC00302.webp",
     title: "Andean Mountains, Peru",
     description: "Exploring high-altitude geological formations in the Peruvian Andes",
     location: {
@@ -19,7 +19,7 @@ const fieldPhotos = [
   },
   {
     id: 2,
-    src: "/images/rocks/IMG_1824.JPG",
+    src: "/images/rocks/IMG_1824.webp",
     title: "Paradox Basin, Utah",
     description: "Salt wall structures and evaporite deposits in the Colorado Plateau",
     location: {
@@ -30,7 +30,7 @@ const fieldPhotos = [
   },
   {
     id: 3,
-    src: "/images/rocks/meteora.jpg",
+    src: "/images/rocks/meteora.webp",
     title: "Meteora, Greece",
     description: "Metamorphic rocks and tectonic history of the Aegean region",
     location: {

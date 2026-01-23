@@ -37,7 +37,7 @@ function RocksAbout() {
       <div className="sticky top-0 h-screen overflow-hidden">
         <motion.div className="absolute inset-0" style={{ scale: imageScale }}>
           <Image
-            src="/images/rocks/IMG_7612.jpeg"
+            src="/images/rocks/IMG_7612.webp"
             alt="Geology fieldwork"
             fill
             sizes="100vw"
