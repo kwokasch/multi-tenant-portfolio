@@ -22,7 +22,7 @@ export const tenants: Record<TenantSlug, TenantConfig> = {
       github: "https://github.com/kwokasch",
       linkedin: "https://linkedin.com/in/kwokasch",
       blueSky: "https://bsky.app/profile/kwokasch.bsky.social",
-      email: "katie@katiewokasch.rocks",
+      email: "katie.wokasch@gmail.com",
     },
   },
   engineer: {
@@ -45,7 +45,7 @@ export const tenants: Record<TenantSlug, TenantConfig> = {
     socialLinks: {
       github: "https://github.com/kwokasch",
       linkedin: "https://linkedin.com/in/kwokasch",
-      email: "katie@katiewokasch.engineer",
+      email: "katie.wokasch@gmail.com",
     },
   },
   social: {
@@ -68,7 +68,7 @@ export const tenants: Record<TenantSlug, TenantConfig> = {
     socialLinks: {
       linkedin: "https://linkedin.com/in/kwokasch",
       twitter: "https://twitter.com/kwokasch",
-      email: "katie@katiewokasch.social",
+      email: "katie.wokasch@gmail.com",
     },
   },
 };

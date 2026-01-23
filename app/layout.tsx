@@ -17,6 +17,15 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: `${tenant.name} | ${tenant.tagline}`,
     description: tenant.description,
+    icons: {
+      icon: [
+        { url: `/favicon-${tenantSlug}.svg`, type: 'image/svg+xml' },
+      ],
+      apple: [
+        { url: `/favicon-${tenantSlug}.svg`, type: 'image/svg+xml' },
+      ],
+      shortcut: `/favicon-${tenantSlug}.svg`,
+    },
   };
 }
 

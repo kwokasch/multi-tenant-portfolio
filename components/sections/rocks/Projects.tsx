@@ -79,7 +79,7 @@ const engineerProjects = [
   },
   {
     title: "Bachelorette App",
-    description: "Fun vibe app for coordinating my sister's bachelorette party",
+    description: "Fun vibe app for coordinating my sister's bachelorette party.",
     tech: ["React", "NodeJS", "Lovable", "Supabase"],
     type: "Personal Project",
     link: "https://github.com/kwokasch/becky-bachelorette"
