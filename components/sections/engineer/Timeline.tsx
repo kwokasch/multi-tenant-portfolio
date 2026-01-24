@@ -28,7 +28,7 @@ const timelineData: TimelineEntry[] = [
     title: "Senior Software Engineer",
     company: "Name.com",
     description:
-      "Building best-in-class products and experiences through deep cross-functional collaboration.",
+      "Building best-in-class products and experiences through deep cross-functional collaboration. ",
     type: "work",
     logo: "/images/engineer/name-logo.jpg",
   },
