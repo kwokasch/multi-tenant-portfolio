@@ -24,7 +24,7 @@ const timelineData: TimelineEntry[] = [
   //   logo: "/images/engineer/name-logo.jpg",
   // },
   {
-    year: "2023 - 2026",
+    year: "2023 - Present",
     title: "Senior Software Engineer",
     company: "Name.com",
     description:
@@ -37,7 +37,7 @@ const timelineData: TimelineEntry[] = [
     title: "Software Engineer",
     company: "Name.com",
     description:
-      "Expanding my skill set and influence by taking on increasingly complex projects and assuming the role of Scrum Master.",
+      "Expanded my skill set and influence by taking on increasingly complex projects and assuming the role of Scrum Master.",
     type: "work",
     logo: "/images/engineer/name-logo.jpg",
   },
@@ -46,7 +46,7 @@ const timelineData: TimelineEntry[] = [
     title: "Associate Software Engineer",
     company: "Name.com",
     description:
-      "Learning the ropes and building my passion for software engineering.",
+      "Learned the ropes and building my passion for software engineering.",
     type: "work", 
     logo: "/images/engineer/name-logo.jpg",
   },
