@@ -37,7 +37,7 @@ const timelineData: TimelineEntry[] = [
     title: "Software Engineer",
     company: "Name.com",
     description:
-      "Expanded my skill set and influence by taking on increasingly complex projects and assuming the role of Scrum Master .",
+      "Expanded my skill set and influence by taking on increasingly complex projects and assuming the role of Scrum Master.",
     type: "work",
     logo: "/images/engineer/name-logo.jpg",
   },
