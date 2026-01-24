@@ -76,9 +76,7 @@ export function EngineerHero() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              Building industry-leading developer tools and customer products at <a href="https://www.name.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 font-medium">Name.com</a>, bringing empathy and a user-centric approach to every project.
-            </p>
-
+              Working with an exceptional team at <a href="https://www.name.com" target="_blank" rel="noopener noreferrer" className="text-orange-500 font-medium">Name.com</a> to build industry-leading developer tools and customer products, grounded in empathy and real user needs.</p>
             <div
               className={`flex flex-wrap gap-4 transition-all duration-700 delay-[400ms] ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
