@@ -39,7 +39,7 @@ const timelineData: TimelineEntry[] = [
     description:
       "Expanded my skill set and influence by taking on increasingly complex projects and assuming the role of Scrum Master.",
     type: "work",
-    logo: "/images/engineer/name-logo.jpg",
+    logo: "/images/engineer/name-logo.jpg ",
   },
   {
     year: "2020 - 2021",
