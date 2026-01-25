@@ -243,26 +243,6 @@ export function SocialHero() {
           </div>
         </div>
       </div>
-
-      {/* Newsletter CTA */}
-      <div className="mt-16 p-8 bg-gradient-to-r from-navy-600/15 dark:from-navy-100/10 to-navy-600/5 dark:to-navy-100/20 rounded-2xl">
-      <h3 className="font-semibold text-navy-700/70 dark:text-navy-100 mb-2 flex items-center gap-2">
-        <span>📬</span> Stay in the loop
-      </h3>
-        <p className="text-navy-700/70 dark:text-navy-100/70 text-sm mb-4">
-          Get notified when I publish new essays or share interesting finds.
-        </p>
-        <div className="flex gap-3">
-          <input
-            type="email"
-            placeholder="your@email.com"
-            className="flex-1 px-4 py-2.5 bg-white dark:bg-neutral-800 border border-navy-200 dark:border-navy-200 rounded-full text-sm text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-navy-400 dark:focus:border-navy-200 focus:ring-2 focus:ring-navy-100 dark:focus:ring-navy-200 transition-all"
-          />
-          <button type="button" className="px-6 py-2 bg-navy-700/70 dark:bg-navy-100 text-white dark:text-neutral-900 text-sm font-medium rounded-lg hover:bg-navy-600 dark:hover:bg-navy-100 transition-colors">
-            Subscribe
-          </button>
-        </div>
-      </div>
     </section>
   );
 }

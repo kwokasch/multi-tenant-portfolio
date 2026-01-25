@@ -152,15 +152,6 @@ function RocksAbout() {
               </svg>
               Substack
             </a>
-            <a
-              href={`mailto:${tenant.socialLinks.email}`}
-              className="flex items-center gap-2 px-4 py-2 bg-zinc-800 border border-zinc-700 rounded-lg hover:border-emerald-500 hover:bg-zinc-700 transition-all duration-300 text-zinc-300 hover:text-emerald-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/20"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email
-            </a>
           </motion.div>
         </div>
       </div>
@@ -268,15 +259,6 @@ function EngineerAbout() {
             geology, or career transitions? I&apos;d love to hear from you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href={`mailto:${tenant.socialLinks.email}`}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-slate-900 font-semibold rounded-lg transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Get in Touch
-            </a>
             <a
               href={tenant.socialLinks.linkedin}
               target="_blank"
@@ -387,24 +369,6 @@ function SocialAbout() {
               &rarr;
             </span>
           </a>  
-
-          <a
-            href={`mailto:${tenant.socialLinks.email}`}
-            className="flex items-center justify-between p-4 bg-white/80 dark:bg-neutral-800/80 border border-navy-100 dark:border-navy-200 rounded-2xl hover:border-navy-600/70 dark:hover:border-navy-100 transition-all group"
-          >
-            <div className="flex items-center gap-4">
-              <svg className="w-5 h-5 text-navy-500 dark:text-navy-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <div>
-                <p className="font-medium text-navy-900 dark:text-navy-200">Email</p>
-                <p className="text-sm text-navy-700/50 dark:text-navy-100">{tenant.socialLinks.email}</p>
-              </div>
-            </div>
-            <span className="text-navy-400 dark:text-navy-200 group-hover:text-navy-700 dark:group-hover:text-navy-100 transition-colors">
-              &rarr;
-            </span>
-          </a>
         </div>
       </div>
     </section>

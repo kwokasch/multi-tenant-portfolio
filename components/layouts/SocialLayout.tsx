@@ -55,12 +55,6 @@ export function SocialLayout({ children }: SocialLayoutProps) {
                 About
               </Link>
               <ThemeToggle />
-              <a
-                href={`mailto:${tenant.socialLinks.email}`}
-                className="px-4 py-2 bg-navy-400/70 dark:bg-navy-200 hover:bg-navy-700 dark:hover:bg-navy-100 text-white dark:text-neutral-900 rounded-full text-sm font-medium transition-colors"
-              >
-                Email me
-              </a>
             </div>
             {/* Mobile Hamburger Button */}
             <button
@@ -107,13 +101,6 @@ export function SocialLayout({ children }: SocialLayoutProps) {
                 </Link>
                 <div className="flex items-center gap-4">
                   <ThemeToggle />
-                  <a
-                    href={`mailto:${tenant.socialLinks.email}`}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="px-4 py-2 bg-navy-400/70 dark:bg-navy-200 hover:bg-navy-700 dark:hover:bg-navy-100 text-white dark:text-neutral-900 rounded-full text-sm font-medium transition-colors w-fit"
-                  >
-                    Email me
-                  </a>
                 </div>
               </div>
             </div>

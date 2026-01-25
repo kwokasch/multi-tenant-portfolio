@@ -53,12 +53,6 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
               >
                 GitHub
               </a>
-              <a
-                href={`mailto:${tenant.socialLinks.email}`}
-                className="ml-2 px-4 py-2 bg-orange-500 hover:bg-orange-400 text-slate-900 font-medium rounded-lg transition-colors text-sm"
-              >
-                Contact me 
-              </a>
             </div>
             {/* Mobile Hamburger Button */}
             <button
@@ -103,22 +97,6 @@ export function EngineerLayout({ children }: EngineerLayoutProps) {
                 >
                   About
                 </Link>
-                <a
-                  href={tenant.socialLinks.github}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-all text-sm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={`mailto:${tenant.socialLinks.email}`}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-2 bg-orange-500 hover:bg-orange-400 text-slate-900 font-medium rounded-lg transition-colors text-sm w-fit"
-                >
-                  Contact me
-                </a>
               </div>
             </div>
           )}
