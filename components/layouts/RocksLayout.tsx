@@ -45,12 +45,6 @@ export function RocksLayout({ children }: RocksLayoutProps) {
               >
                 About
               </Link>
-              <a
-                href={`mailto:${tenant.socialLinks.email}`}
-                className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-medium rounded transition-colors"
-              >
-                Contact
-              </a>
             </div>
             {/* Mobile Hamburger Button */}
             <button
@@ -95,13 +89,6 @@ export function RocksLayout({ children }: RocksLayoutProps) {
                 >
                   About
                 </Link>
-                <a
-                  href={`mailto:${tenant.socialLinks.email}`}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-zinc-900 font-medium rounded transition-colors text-sm w-fit"
-                >
-                  Contact
-                </a>
               </div>
             </div>
           )}

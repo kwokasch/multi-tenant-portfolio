@@ -80,12 +80,12 @@ export function RocksHero() {
   const currentPhoto = fieldPhotos[currentIndex];
 
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 md:py-16">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-900/30 border border-emerald-700/50 rounded-full text-emerald-400 text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-3 md:py-1 bg-emerald-900/30 border border-emerald-700/50 rounded-full text-emerald-400 text-sm mb-6">
               <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
               Former geologist, lifelong nerd
             </div>
@@ -218,10 +218,10 @@ export function RocksHero() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl p-6 text-center"
+              className="bg-zinc-800/30 border border-zinc-700/50 rounded-xl md:p-6 p-2 text-center"
             >
-              <span className="text-2xl mb-2 block">{stat.icon}</span>
-              <p className="text-2xl font-bold text-emerald-500 mb-1">
+              <span className="md:text-2xl text-lg mb-2 block">{stat.icon}</span>
+              <p className="md:text-2xl text-lg font-bold text-emerald-500 mb-1">
                 {stat.value}
               </p>
               <p className="text-zinc-500 text-sm">{stat.label}</p>
