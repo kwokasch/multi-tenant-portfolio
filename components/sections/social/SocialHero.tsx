@@ -25,11 +25,19 @@ export function SocialHero() {
   const tenant = useTenant();
   const [linkedInPosts, setLinkedInPosts] = useState<LinkedInPost[]>([
     {
+      title: "This feels more important than ever.",
+      excerpt: "This feels more important than ever.In the age of AI slop, the real differentiator is showing users that you genuinely care about their needs, and building products and solutions designed to remove friction and delight them along the way 🌷",
+      likes: 142,
+      comments: 23,
+      date: "Jan 25, 2026",
+      url: "https://www.linkedin.com/posts/kwokasch_bptw2026-2026builtinbest-activity-7419875105805107200-qoLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
+    },
+    {
       title: "name.com has been included on the “Best Place to Work” award in Colorado",
       excerpt: "Incredibly proud to be part of this company, we’ve got another amazing year in store 🎉",
       likes: 142,
       comments: 23,
-      date: "2d ago",
+      date: "Jan 22, 2026",
       url: "https://www.linkedin.com/posts/kwokasch_bptw2026-2026builtinbest-activity-7419875105805107200-qoLz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
     },
     {
@@ -37,7 +45,7 @@ export function SocialHero() {
       excerpt: "Our API team is hard at work building a best-in-class developer experience, making it easier than ever for partners to search for domains and help users bring their businesses online.",
       likes: 89,
       comments: 15,
-      date: "1w ago",
+      date: "Jan 18, 2026",
       url: "https://www.linkedin.com/posts/kwokasch_claims-flow-namecom-core-api-activity-7417220994983153664-4LF0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
     },
   ]);
@@ -231,11 +239,11 @@ export function SocialHero() {
                   >
                   <h3 className="font-semibold text-navy-700 dark:text-navy-100 mb-2">{post.title}</h3>
                   <p className="text-navy-700/70 dark:text-navy-200 text-sm mb-3">{post.excerpt}</p>
-                  <div className="flex items-center gap-4 text-sm text-navy-700/70 dark:text-navy-200">
-                    <span>{post.likes} likes</span>
-                    <span>{post.comments} comments</span>
-                    <span className="ml-auto">{post.date}</span>
-                  </div>
+                  {/* <div className="flex items-start gap-4 text-sm text-navy-700/70 dark:text-navy-200"> */}
+                    {/* <span>{post.likes} likes</span> */}
+                    {/* <span>{post.comments} comments</span> */}
+                    <span className="ml-auto text-sm text-navy-600/70 dark:text-navy-200">{post.date}</span>
+                  {/* </div> */}
                   </a>
                 );
               })
