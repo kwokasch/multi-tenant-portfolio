@@ -25,7 +25,7 @@ const timelineData: TimelineEntry[] = [
   // },
   {
     year: "2023 - Present",
-    title: "Senior Software Engineer",
+    title: "Senior Software Engineer ",
     company: "Name.com",
     description:
       "Building best-in-class products and experiences through deep cross-functional collaboration.",
