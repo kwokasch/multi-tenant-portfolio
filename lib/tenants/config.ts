@@ -83,6 +83,10 @@ export const domainToTenant: Record<string, TenantSlug> = {
   "rocks.localhost:3000": "rocks",
   "engineer.localhost:3000": "engineer",
   "social.localhost:3000": "social",
+  "localhost:3001": "rocks",
+  "rocks.localhost:3001": "rocks",
+  "engineer.localhost:3001": "engineer",
+  "social.localhost:3001": "social",
 };
 
 export function getTenantByDomain(domain: string): TenantConfig {
