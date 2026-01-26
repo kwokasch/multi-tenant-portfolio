@@ -52,7 +52,7 @@ const timelineData: TimelineEntry[] = [
   },
   {
     year: "2019",
-    title: "Software Engineering Bootcamp ",
+    title: "Software Engineering Bootcamp",
     company: "Flatiron School",
     description:
       "Intensive 15-week full-stack web development bootcamp. JavaScript, React, Node.js, Ruby on Rails. Built Homeward Bound, a pet recovery platform.",
