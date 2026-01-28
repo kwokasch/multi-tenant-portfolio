@@ -25,6 +25,14 @@ export function SocialHero() {
   const tenant = useTenant();
   const [linkedInPosts, setLinkedInPosts] = useState<LinkedInPost[]>([
     {
+      title: "I’ve been experimenting with Claude Code and Vercel and I’m honestly blown away 🤯",
+      excerpt: "Using Claude Code with the Vercel MCP, I was able to spin up a multi-tenant app in minutes and serve multiple domains from a single Vercel-hosted codebase.",
+      likes: 142,
+      comments: 23,
+      date: "Jan 27, 2026",
+      url: "https://www.linkedin.com/posts/kwokasch_ive-been-experimenting-with-claude-code-activity-7422115955121635328-Kgq1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAO4gZ4BlqH4YH80tOwcnzGTuLkNdj3Fyt4",
+    },
+    {
       title: "This feels more important than ever.",
       excerpt: "This feels more important than ever.In the age of AI slop, the real differentiator is showing users that you genuinely care about their needs, and building products and solutions designed to remove friction and delight them along the way 🌷",
       likes: 142,
